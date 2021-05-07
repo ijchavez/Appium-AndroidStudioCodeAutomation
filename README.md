@@ -1,7 +1,7 @@
 # Appium-AndroidStudioCodeAutomation
-Pruebas automatizadas para android con appium, Android Studio e IntelliJ Idea con TestNG
+## Pruebas automatizadas para android con appium, Android Studio e IntelliJ Idea con TestNG
 
-Instalar:
+- Instalar:
     > IntelliJ Idea
     > Appium
         El archivo JSON debe agregarse en las configuraciones de APPIUM:
@@ -17,8 +17,8 @@ Instalar:
 
     > Android Studio
 
-AndroidStudioProjects >> Proyecto para levantar con Appium una terminal Android
-Configuraciones Appium >> Archivo JSON para configurar Appium
-IdeaProjects >> Tests creados para utilizar con Android
-Dependencias >> Dependencias a instalar para utilizar en Android Studio
+- AndroidStudioProjects >> Proyecto para levantar con Appium una terminal Android
+- Configuraciones Appium >> Archivo JSON para configurar Appium
+- IdeaProjects >> Tests creados para utilizar con Android
+- Dependencias >> Dependencias a instalar para utilizar en Android Studio
 
