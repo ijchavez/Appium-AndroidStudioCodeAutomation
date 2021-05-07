@@ -2,8 +2,8 @@
 ## Pruebas automatizadas para android con appium, Android Studio e IntelliJ Idea con TestNG
 
 - Instalar:
-    > IntelliJ Idea
-    > Appium
+    - IntelliJ Idea
+    - Appium
         El archivo JSON debe agregarse en las configuraciones de APPIUM:
 
         JSON Representation
@@ -15,7 +15,7 @@
         "automationName": "UiAutomator2"
         }
 
-    > Android Studio
+    - Android Studio
 
 - AndroidStudioProjects >> Proyecto para levantar con Appium una terminal Android
 - Configuraciones Appium >> Archivo JSON para configurar Appium
