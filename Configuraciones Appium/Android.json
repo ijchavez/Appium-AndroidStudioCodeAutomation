@@ -1,0 +1,8 @@
+{
+    "platformName": "Android",
+    "platformVersion": "11.0",
+    "app": "/Users/gchavez/Downloads/sampleApk/ApiDemos-debug.apk",
+    "deviceName": "emulator-5554",
+    "automationName": "UiAutomator2"
+    
+  }
