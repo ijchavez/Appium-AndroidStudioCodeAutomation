@@ -5,8 +5,9 @@
     - IntelliJ Idea
     - Appium
         El archivo JSON debe agregarse en las configuraciones de APPIUM:
-
+        ```sh
         JSON Representation
+
         {
         "platformName": 'Tipo de dispositivo',
         "platformVersion": 'Version del SO',
@@ -14,6 +15,7 @@
         "deviceName": "Nombre del dispositivo",
         "automationName": "UiAutomator2"
         }
+        ```
 
     - Android Studio
 
