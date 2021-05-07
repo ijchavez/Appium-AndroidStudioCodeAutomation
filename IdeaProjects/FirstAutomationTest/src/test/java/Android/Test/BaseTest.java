@@ -3,15 +3,16 @@ package Android.Test;
 import Android.Constants;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     public AndroidDriver driver;
-
     public BaseTest(AndroidDriver remoteDriver){
         driver = remoteDriver;
 
@@ -28,9 +29,9 @@ public class BaseTest {
         dc.setCapability(MobileCapabilityType.APP,Constants.APK_PATH);
         dc.setCapability(MobileCapabilityType.DEVICE_NAME, Constants.ANDROID_DEVICE_NAME);
         dc.setCapability(MobileCapabilityType.AUTOMATION_NAME,Constants.AUTOMATION_NAME);
-        dc.setCapability("autoGrantPermissions", "true");
         driver = new AndroidDriver(new URL(appiumServerURL), dc);
         PageFactory.initElements(driver, this);
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
     }
 

@@ -23,7 +23,7 @@ public class LandingPage {
         return menuPage;
 
     }
-    @FindBy(id="android:id/title_template")
+    @FindBy(id="android:id/alertTitle")
     WebElement titleTemplate;
     public String titleTemplateGetText(){
         String titleTemplateText = titleTemplate.getText();

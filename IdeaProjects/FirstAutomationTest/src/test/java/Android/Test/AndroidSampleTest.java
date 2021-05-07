@@ -11,10 +11,10 @@ import org.testng.annotations.Test;
 public class AndroidSampleTest extends BaseTest {
 
     @Test
-    public void clickOnOkBtnTest() throws InterruptedException {
+    public void clickOnOkBtnTest(){
         LandingPage landingPage = new LandingPage(driver);
         String titleTemplateText = landingPage.titleTemplateGetText();
-        System.out.println(titleTemplateText);
+        System.out.println(">>> " + titleTemplateText);
         Assert.assertEquals(titleTemplateText, Constants.APP_NAME);
 
         MenuPage menuPage = landingPage.clickOnOkBtn();
