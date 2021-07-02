@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     public AndroidDriver driver;
+
     public BaseTest(AndroidDriver remoteDriver){
         driver = remoteDriver;
 

@@ -3,14 +3,12 @@ package Android.Test;
 import Android.Constants;
 import Android.PageObject.AlertDialoguePage;
 import Android.PageObject.AppOption;
-import Android.PageObject.LandingPage;
 import Android.PageObject.MenuPage;
 import io.appium.java_client.MobileElement;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AndroidSampleTest extends BaseTest {
+public class AndroidSampleTest extends BaseTest{
 
     /****
      *  Con la nueva configuracion del desireCapabilities queda en desuso
@@ -34,7 +32,7 @@ public class AndroidSampleTest extends BaseTest {
         AlertDialoguePage alertDialoguePage = appOption.clickOnAlertDialogue();
 
         String alertDialogueTitle = alertDialoguePage.getActionBarText();
-        Assert.assertEquals(alertDialogueTitle,Constants.ALERT_DIALOGUES_MENU);
+        Assert.assertEquals(alertDialogueTitle, Constants.ALERT_DIALOGUES_MENU);
         System.out.println(">>> " + alertDialogueTitle);
 
     }
@@ -88,6 +86,7 @@ public class AndroidSampleTest extends BaseTest {
      */
     @Test
     public void grabacionDesdeAppiumTest(){
+
         MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("App");
         el1.click();
         MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Alert Dialogs");
