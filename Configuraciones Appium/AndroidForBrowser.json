@@ -1,0 +1,10 @@
+{
+    "platformName": "Android",
+    "platformVersion": "11.0",
+    "appPackage": "com.android.chrome",
+    "appActivity": "com.google.android.apps.chrome.Main",
+    "noReset": true,
+    "deviceName": "emulator-5554",
+    "automationName": "UiAutomator2",
+    "autoGrantPermissions": true
+  }

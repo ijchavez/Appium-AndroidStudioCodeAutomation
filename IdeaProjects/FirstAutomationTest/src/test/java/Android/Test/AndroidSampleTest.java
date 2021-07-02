@@ -5,25 +5,31 @@ import Android.PageObject.AlertDialoguePage;
 import Android.PageObject.AppOption;
 import Android.PageObject.LandingPage;
 import Android.PageObject.MenuPage;
+import io.appium.java_client.MobileElement;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AndroidSampleTest extends BaseTest {
 
-    @Test
-    public void clickOnOkBtnTest(){
-        LandingPage landingPage = new LandingPage(driver);
-        String titleTemplateText = landingPage.titleTemplateGetText();
-        System.out.println(">>> " + titleTemplateText);
-        Assert.assertEquals(titleTemplateText, Constants.APP_NAME);
-
-        MenuPage menuPage = landingPage.clickOnOkBtn();
-
-    }
+    /****
+     *  Con la nueva configuracion del desireCapabilities queda en desuso
+     *  @Test
+     *  public void clickOnOkBtnTest(){
+     *      LandingPage landingPage = new LandingPage(driver);
+     *      String titleTemplateText = landingPage.titleTemplateGetText();
+     *      System.out.println(">>> " + titleTemplateText);
+     *      Assert.assertEquals(titleTemplateText, Constants.APP_NAME);
+     *      MenuPage menuPage = landingPage.clickOnOkBtn();
+     *  }
+     */
     @Test
     public void clickOnAlertDialoguesBtnTest(){
-        LandingPage landingPage = new LandingPage(driver);
-        MenuPage menuPage = landingPage.clickOnOkBtn();
+        /*****
+         * Con la nueva configuracion del desireCapabilities queda en desuso
+         * LandingPage landingPage = new LandingPage(driver);
+         */
+        MenuPage menuPage = new MenuPage(driver);
         AppOption appOption = menuPage.clickOnAppBtn();
         AlertDialoguePage alertDialoguePage = appOption.clickOnAlertDialogue();
 
@@ -34,8 +40,11 @@ public class AndroidSampleTest extends BaseTest {
     }
     @Test
     public void DialogWithALongMessageTest() throws InterruptedException {
-        LandingPage landingPage = new LandingPage(driver);
-        MenuPage menuPage = landingPage.clickOnOkBtn();
+        /*****
+         * Con la nueva configuracion del desireCapabilities queda en desuso
+         * LandingPage landingPage = new LandingPage(driver);
+         */
+        MenuPage menuPage = new MenuPage(driver);
         AppOption appOption = menuPage.clickOnAppBtn();
         AlertDialoguePage alertDialoguePage = appOption.clickOnAlertDialogue();
 
@@ -55,8 +64,11 @@ public class AndroidSampleTest extends BaseTest {
     }
     @Test
     public void setUserAndPasswordTest() throws InterruptedException {
-        LandingPage landingPage = new LandingPage(driver);
-        MenuPage menuPage = landingPage.clickOnOkBtn();
+        /*****
+         * Con la nueva configuracion del desireCapabilities queda en desuso
+         * LandingPage landingPage = new LandingPage(driver);
+         */
+        MenuPage menuPage = new MenuPage(driver);
         AppOption appOption = menuPage.clickOnAppBtn();
         AlertDialoguePage alertDialoguePage = appOption.clickOnAlertDialogue();
 
@@ -68,5 +80,21 @@ public class AndroidSampleTest extends BaseTest {
         alertDialoguePage.clickOnOkFillUserAndPasswordBtn();
 
     }
+    @Test
+    public void prueba(){
+        MobileElement el1 = (MobileElement) driver.findElementByAccessibilityId("App");
+        el1.click();
+        MobileElement el2 = (MobileElement) driver.findElementByAccessibilityId("Alert Dialogs");
+        el2.click();
+        MobileElement el3 = (MobileElement) driver.findElementByAccessibilityId("Text Entry dialog");
+        el3.click();
+        MobileElement el4 = (MobileElement) driver.findElementById("io.appium.android.apis:id/username_edit");
+        el4.sendKeys("usuario");
+        MobileElement el5 = (MobileElement) driver.findElementById("io.appium.android.apis:id/password_edit");
+        el5.sendKeys("password");
+        MobileElement el6 = (MobileElement) driver.findElementById("android:id/button1");
+        el6.click();
+    }
+
     
 }
