@@ -8,7 +8,7 @@ import io.appium.java_client.MobileElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class AndroidSampleTest extends BaseTest {
+public class MobileTest extends BaseTest {
 
     /****
      *  Con la nueva configuracion del desireCapabilities queda en desuso
